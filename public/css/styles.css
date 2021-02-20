@@ -1,0 +1,228 @@
+body {
+  margin: 0px;
+  color: #212121;
+  background: #e0e0e0;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background: #00695c;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Pantalla Principal */
+
+.primer {
+  font-size: 30px;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primeraPant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 25%;
+}
+
+.primeraPant i {
+  font-size: 100px;
+}
+
+.primeraPant p {
+  text-align: center;
+}
+
+/* Botones, como vos! jaja */
+
+.boton {
+  border-radius: 100%;
+  font-size: 28px;
+  font-weight: bolder;
+  width: 50px;
+  padding-top: 0px;
+  padding-bottom: 1‒;
+  padding-right: 0px;
+  padding-left: 0px;
+  height: 50px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 15vh;
+  right: 5vh;
+}
+
+.boton2 {
+  display: none;
+}
+
+#botonVolver {
+  position: absolute;
+  bottom: 15vh;
+  right: 5vh;
+  max-width: 100px;
+}
+
+#botonBorrar {
+  position: absolute;
+  bottom: 5vh;
+  left: 5vh;
+  max-width: 100px;
+}
+
+.btn-default {
+  background-color: #004d44;
+  color: #e0e0e0;
+  box-shadow: none;
+}
+
+.btn-default:hover {
+  background-color: #004d44;
+  border-color: #009688;
+  color: #e0e0e0;
+  box-shadow: none;
+}
+
+.btn-default:focus {
+  background-color: #009284;
+  border-color: #009688;
+  color: #e0e0e0;
+  box-shadow: none;
+}
+
+/* Formularios! */
+
+.form-label {
+  margin-top: 5px;
+}
+
+.form-select:hover,
+.form-select:active,
+.form-control:hover,
+.form-control:active {
+  border-color: #004d44;
+  box-shadow: none;
+}
+
+/* Separaciones */
+
+#listado .row,
+#descripcion .row {
+  margin-top: 10px;
+}
+
+/* Listas */
+
+.itemInterior {
+  display: inline-block;
+  margin: 0;
+  margin-left: 10px;
+}
+
+/* Formulario descripcion */
+
+#descItem {
+  text-transform: uppercase;
+}
+
+/* Herramientas */
+
+.verde {
+  color: #009688;
+}
+.derecha {
+  float: right;
+  padding-top: 5px;
+}
+
+.separado {
+  margin: 0.5vh;
+}
+
+.separado2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#principal {
+  display: block;
+}
+
+#cargaItem {
+  display: block;
+}
+
+#listado {
+  display: none;
+}
+
+#descripcion {
+  display: none;
+}
+
+.fondo {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background: #cfd8dc;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.fondo p {
+  margin: 0px;
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+
+  #principal {
+    display: block;
+  }
+
+  .primer {
+    height: 25vh;
+  }
+
+  #cargaItem {
+    display: block;
+  }
+
+  .boton2 {
+    display: block;
+    margin: auto auto;
+  }
+
+  .boton {
+    display: none;
+  }
+
+  /* #cargaItemDesktop {
+    display: block;
+  } */
+
+  #listado {
+    display: none;
+  }
+
+  #descripcion {
+    display: none;
+  }
+
+  /* #listado720 {
+    height: 25vh;
+    display: block;
+  } */
+}

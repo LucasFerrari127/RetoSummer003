@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto Semanal 003</title>
+
+    <!-- 
+Buenas noches muchachos! espero que les guste la App que hice con mucho amor, cariño y por sobre todo paciencia jaja.
+     -->
+
+    <!-- Información -->
+    <meta name="Description" content="Reto Semanal 03" />
+    <meta
+      name="keywords"
+      content="app, compras, aplicacion de compras, que falta comprar?, comprando"
+    />
+    <meta name="author" content="Lucas Ferrari" />
+    <meta name="copyright" content="SummerHack 2021" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+
+    <!-- Meta para facebook -->
+    <meta property="og:title" content="Mi App de Compras" />
+    <meta property="og:description" content="Mi App de Compras" />
+    <meta property="og:type" content="music.song" />
+    <meta
+      property="og:image"
+      content="https://retosummer003.web.app/images/favicon.png"
+    />
+    <meta property="og:url" content="https://retosummer003.web.app" />
+
+    <!-- Meta para twitter -->
+    <meta property="twitter:title" content="Mi App de Compras" />
+    <meta property="twitter:description" content="Mi App de Compras" />
+    <meta property="twitter:type" content="App Compras" />
+    <!-- Este meta no me funcionaba con ./images/portada.jpg, ni con la url de mi web del reto -->
+    <meta
+      property="twitter:image"
+      content="https://retosummer003.web.app/images/favicon.png"
+    />
+    <meta property="twitter:url" content="Lucas Ferrari" />
+    <meta property="twitter:creator" content="@notengotwitter" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1><i class="fas fa-cart-arrow-down"></i> Lista de compras!</h1>
+    </header>
+
+    <section id="principal">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 primer">
+            <div class="primeraPant">
+              <p>No hay nada para comprar!</p>
+              <i class="far fa-smile-beam"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="cargaItem">
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="carga_modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Que Necesitas Comprar?
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <input
+                  type="comida"
+                  class="form-control"
+                  id="carga_item"
+                  placeholder="Que necesitas comprar?"
+                />
+              </div>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                id="carga_grupoItem"
+              >
+                <option value="0" selected>A que grupo pertenece?</option>
+                <option value="1">Carne</option>
+                <option value="2">Verdura</option>
+                <option value="3">Fruta</option>
+                <option value="4">Panadería</option>
+                <option value="5">Bebidas</option>
+                <option value="6">Limpieza</option>
+                <option value="7">Otros</option>
+              </select>
+              <div class="mb-3">
+                <label
+                  for="principal_descripcion"
+                  class="form-label"
+                  id="carga_descripcionItem"
+                  >Descripción</label
+                >
+                <textarea
+                  class="form-control"
+                  id="principal_descripcion"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                id="botonCerrar"
+              >
+                Cerrar
+              </button>
+              <button
+                type="button"
+                class="btn btn-default"
+                id="botonCargar"
+                data-bs-dismiss="modal"
+              >
+                Agregar Item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-default boton"
+        data-bs-toggle="modal"
+        data-bs-target="#carga_modal"
+      >
+        +
+      </button>
+    </section>
+
+    <section id="listado" class="separado2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4" id="prueba">
+            <ul class="list-group" id="principal_lista"></ul>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="descripcion" class="separado2">
+      <div class="container fluid">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title" id="descItem"></h2>
+                <hr />
+                <h6 class="card-subtitle mb-2 text-muted" id="descGrupo"></h6>
+                <p class="card-text" id="descDesc"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4"></div>
+          <button type="button" class="btn btn-default" id="botonVolver">
+            Volver
+          </button>
+          <!-- <button type="button" class="btn btn-default" id="botonBorrar">
+            Borrar
+          </button> -->
+        </div>
+      </div>
+    </section>
+
+    <button
+      type="button"
+      class="btn btn-default boton2 separado2"
+      data-bs-toggle="modal"
+      data-bs-target="#carga_modal"
+      id="boton2"
+    >
+      Agregar Producto
+    </button>
+
+    <footer>
+      <div class="fondo">
+        <p>Lucas Ferrari SummerHack 2021 - Todos los Izquierdos Reservados</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/65383ea7d8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
