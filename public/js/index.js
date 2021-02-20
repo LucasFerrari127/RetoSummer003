@@ -57,6 +57,11 @@ mediaqueryList.addListener( function(EventoMediaQueryList) {
 // funcion para cargar un nuevo item.
 let cargar = document.getElementById('botonCargar').addEventListener('click', function(){
 
+
+    if (item.value == '') {
+        alert ('No Completaste el campo Item!!')
+        return
+    }
     pantallaPrincipal.style.display = 'none';
     pantallaListado.style.display = 'block';
     pantallaCargaItem.style.display = 'block';
