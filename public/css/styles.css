@@ -54,8 +54,15 @@ header {
   height: 50px;
   padding-bottom: 10px;
   position: absolute;
-  bottom: 15vh;
+  bottom: 14vh;
   right: 5vh;
+}
+
+#borrar {
+  position: absolute;
+  bottom: 15vh;
+  left: 5vh;
+  display: none;
 }
 
 .boton2 {
@@ -190,6 +197,7 @@ header {
 
   #principal {
     display: block;
+    margin-top: 25px;
   }
 
   .primer {
@@ -203,6 +211,7 @@ header {
   .boton2 {
     display: block;
     margin: auto auto;
+    margin-top: 25px;
   }
 
   .boton {
